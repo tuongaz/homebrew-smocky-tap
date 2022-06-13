@@ -10,7 +10,7 @@ class Smocky < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/tuongaz/smocky/releases/download/v0.0.7/smocky_v0.0.7_darwin_amd64.tar.gz"
-      sha256 "d494b7bd735cf5519c7b6e55a306ce8d6c8449ff3fe3d9c4091d42a21e28457c"
+      sha256 "d9ea37d13753726140fee40c53a800213db0fd40d958a154e4b36e1d3d5841aa"
 
       def install
         bin.install "smocky"
@@ -18,7 +18,7 @@ class Smocky < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/tuongaz/smocky/releases/download/v0.0.7/smocky_v0.0.7_darwin_arm64.tar.gz"
-      sha256 "c7abdc1ca322553698c900518da6f7f187f5f9d676ffe5b178af5e526b31113e"
+      sha256 "55bcb25459d67e1cdf984f4f6162bd6f6a29bcfd08a14722b39a2a84bcad3238"
 
       def install
         bin.install "smocky"
@@ -27,17 +27,17 @@ class Smocky < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.7/smocky_v0.0.7_linux_arm64.tar.gz"
-      sha256 "c4a11506d529e1527961be1966da6c59853b5173410b5968fccce1170dceb023"
+    if Hardware::CPU.intel?
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.7/smocky_v0.0.7_linux_amd64.tar.gz"
+      sha256 "686ead33d4d205ca729357e9953e7bab68e6f36fad8a4c16c2200d09e4db1a1f"
 
       def install
         bin.install "smocky"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.7/smocky_v0.0.7_linux_amd64.tar.gz"
-      sha256 "a8f6df091e7c4bb4faee67ade481c5936bbf15dec1453adfc26279a47cfa2dd3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.7/smocky_v0.0.7_linux_arm64.tar.gz"
+      sha256 "95ec30ac345e6f896dc45dcc91a73c48528217c7337cc47e72d6333789cf987f"
 
       def install
         bin.install "smocky"
