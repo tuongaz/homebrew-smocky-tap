@@ -5,20 +5,20 @@
 class Smocky < Formula
   desc "Smocky is a mocking tool"
   homepage "https://github.com/tuongaz/smocky"
-  version "0.0.29"
+  version "0.0.30"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.29/smocky_v0.0.29_darwin_amd64.tar.gz"
-      sha256 "21588a08899fb3ba3c0e58c4174338dad0137001ce2f0802a25488dc041014d4"
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.30/smocky_v0.0.30_darwin_amd64.tar.gz"
+      sha256 "4f6c80bcca8c7bac67428d69b3a3eedf5dbdd77d7aab021f431eba72edab9959"
 
       def install
         bin.install "smocky"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.29/smocky_v0.0.29_darwin_arm64.tar.gz"
-      sha256 "73b96a2b4359c476b0843fee49469bc4ef5633cf080d968308c2c2da05f145d4"
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.30/smocky_v0.0.30_darwin_arm64.tar.gz"
+      sha256 "71d5a1abfbe3a08453ebf67890b7d81734e01952eb109d6d4e51b268f83357a8"
 
       def install
         bin.install "smocky"
@@ -27,17 +27,17 @@ class Smocky < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.29/smocky_v0.0.29_linux_arm64.tar.gz"
-      sha256 "31dfa219640282ef53e16af5acb3542e7deb28b93e73c47713126f687f7068e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.30/smocky_v0.0.30_linux_amd64.tar.gz"
+      sha256 "b45ef2b310eca0b3db0319fc6c68064498155b23c0c6d3b40e4903800782ea4d"
 
       def install
         bin.install "smocky"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.29/smocky_v0.0.29_linux_amd64.tar.gz"
-      sha256 "ef6f3cd11b8677eaddccbd781d7fb06fe5cdfc4a606f019c9a173e4cd5898444"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.30/smocky_v0.0.30_linux_arm64.tar.gz"
+      sha256 "b1f8829a38adb2aeb7988b5f71550c07d33c25e5bdb483b7589d3689562284d9"
 
       def install
         bin.install "smocky"
