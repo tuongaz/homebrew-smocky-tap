@@ -5,20 +5,20 @@
 class Smocky < Formula
   desc "Smocky is a mocking tool"
   homepage "https://github.com/tuongaz/smocky"
-  version "0.0.63"
+  version "0.0.64"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.63/smocky_v0.0.63_darwin_arm64.tar.gz"
-      sha256 "5f793fc4f02baeb011d01052e8cd0b9022314818c96f4388e1f1d59fc67da6a3"
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.64/smocky_v0.0.64_darwin_arm64.tar.gz"
+      sha256 "fc29e9b5b0f26ebcea2387a6f2b1e747f5022be4dc459936bd0f0525abd8c156"
 
       def install
         bin.install "smocky"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.63/smocky_v0.0.63_darwin_amd64.tar.gz"
-      sha256 "9a519e0eb9cb0a680a1f19034450039381d7d027e665f617a7fe2d8e189144bd"
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.64/smocky_v0.0.64_darwin_amd64.tar.gz"
+      sha256 "5a83313cf5d7f51dd96339417b8c47480692440f2c32c24181128ce7a4b8b2c9"
 
       def install
         bin.install "smocky"
@@ -28,16 +28,16 @@ class Smocky < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.63/smocky_v0.0.63_linux_amd64.tar.gz"
-      sha256 "f6d9d2e5e4ceba9ae5453033c9c12cd07dcd58b9695f5dd9f5214c76ca122ec5"
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.64/smocky_v0.0.64_linux_amd64.tar.gz"
+      sha256 "eb6a01a73400393f747b1f7423f7d05d6ab8424c80616e78da29a7b81e02d745"
 
       def install
         bin.install "smocky"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tuongaz/smocky/releases/download/v0.0.63/smocky_v0.0.63_linux_arm64.tar.gz"
-      sha256 "63b845fccaa34bb8642652ce0fc538972dee8329acd67a1ab7f046fa1a08c42f"
+      url "https://github.com/tuongaz/smocky/releases/download/v0.0.64/smocky_v0.0.64_linux_arm64.tar.gz"
+      sha256 "d0bd8a159918f0bc057e3c530ed7b65c61e7388bc70a0c9e0821b3ac61f43fd9"
 
       def install
         bin.install "smocky"
